@@ -1,20 +1,71 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-grid id="container">
+  <ion-row>
+    <ion-col sizeLg="5" sizeXs="12" pushLg="3" class="custom_position">
+      <div class="content__dropdown">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12" class="title_spacing">
+              <ion-text id="custom_select_label">Custom Dropdrown</ion-text>
+            </ion-col>
+            <ion-col sizeLg="7" sizeXs="12" sizeSm="7" sizeMd="7" class="content__dropdown_border">
+              <div class="multiselect" (click)="dropdownCustomUpDown()">
+                <div class="selectBox">
+                  <select id="select_custom">
+                    <option>Select...</option>
+                  </select>
+                  <i id="icon"></i>
+                  <div class="overSelect"></div>
+                </div>
+                <div id="checkboxes">
+                  <ion-list mode="ios" lines="none">
+                    <ion-radio-group allow-empty-selection value="anchovies" (ionChange)="getValueSelectCustom($event)">
+                      <ion-item class="custom_item_ionic">
+                        <ion-label>Custom Dropdrown test</ion-label>
+                        <ion-radio slot="end" color="light" value="Custom Dropdrown test"></ion-radio>
+                      </ion-item>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+                      <ion-item class="custom_item_ionic">
+                        <ion-label>Second Dropdrown option</ion-label>
+                        <ion-radio slot="end" color="light" value="Second Dropdrown option"></ion-radio>
+                      </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+                      <ion-item class="custom_item_ionic">
+                        <ion-label>Third Dropdrown option</ion-label>
+                        <ion-radio slot="end" color="light" value="Third Dropdrown option"></ion-radio>
+                      </ion-item>
+
+                      <ion-item class="custom_item_ionic">
+                        <ion-label>Another one</ion-label>
+                        <ion-radio slot="end" color="light" value="Another one"></ion-radio>
+                      </ion-item>
+
+                      <ion-item class="custom_item_ionic">
+                        <ion-label>But not less important</ion-label>
+                        <ion-radio slot="end" color="light" value="But not less important"></ion-radio>
+                      </ion-item>
+
+                      <ion-item class="custom_item_ionic">
+                        <ion-label>The lastest option in the dropdown</ion-label>
+                        <ion-radio slot="end" color="light" value="The lastest option in the dropdown"></ion-radio>
+                      </ion-item>
+                    </ion-radio-group>
+                  </ion-list>
+                </div>
+              </div>
+              <ion-text id="custom_select_bottom_text">Select: Custom Dropdown test</ion-text>
+            </ion-col>
+            <ion-col  sizeLg="5" sizeSm="5" sizeMd="7" sizeXs="12">
+              <p id="text_right">
+                This is a desing example !!!!!
+              </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+    </ion-col>
+    <ion-col sizeLg="7" sizeXs="6"  class="hidden_movil">
+      <img src="../../assets/images/background.png" alt="">
+    </ion-col>
+  </ion-row>
+</ion-grid>
